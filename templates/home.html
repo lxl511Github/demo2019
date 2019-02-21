@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}标题{% endblock %}</title>
+</head>
+<body>
+<a href="{% url 'tong' %}">链接页面</a>
+<a href="{% url 'nav' %}">链接nav</a>
+{% block content %}
+    <div>z这是一个div</div>
+    {% include 'tong.html' %}
+{% endblock %}
+
+{% for i in list %}
+    <a href="{{ i }}">ad</a>
+{% endfor %}
+
+
+
+
+</body>
+</html>
+
